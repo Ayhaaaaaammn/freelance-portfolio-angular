@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="inner">
+    <a href="#top" class="logo">
+      <span class="mark"><img src="assets/icons/code.svg" alt="" aria-hidden="true" /></span>
+      {{ name }}
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a *ngFor="let link of links" [href]="link.href" class="nav-link">{{ link.label }}</a>
+    </nav>
+  </div>
+</header>

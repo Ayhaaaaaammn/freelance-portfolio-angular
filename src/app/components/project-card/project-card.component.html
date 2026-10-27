@@ -1,0 +1,26 @@
+<article class="card">
+  <div class="image-wrap">
+    <img [src]="item.imageUrl" [alt]="'Превью проекта ' + item.title" class="image" />
+    <button
+      type="button"
+      class="like"
+      (click)="toggleLike()"
+      [attr.aria-pressed]="liked"
+      [attr.aria-label]="liked ? 'Убрать из понравившихся' : 'Отметить как понравившийся'"
+    >
+      <img [src]="liked ? 'assets/icons/heart-filled.svg' : 'assets/icons/heart.svg'" alt="" />
+    </button>
+  </div>
+
+  <div class="body">
+    <div class="header">
+      <h3 class="title">{{ item.title }}</h3>
+      <span class="year">{{ item.year }}</span>
+    </div>
+    <p class="description">{{ item.description }}</p>
+    <ul class="tags">
+      <li *ngFor="let tag of item.tags" class="tag">{{ tag }}</li>
+    </ul>
+    <span class="id">Проект № {{ item.id }}</span>
+  </div>
+</article>

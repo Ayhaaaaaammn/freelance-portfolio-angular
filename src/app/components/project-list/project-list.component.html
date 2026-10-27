@@ -1,0 +1,10 @@
+<section class="section" id="projects">
+  <div class="head">
+    <h2 class="title">Проекты</h2>
+    <p class="subtitle">Всего проектов: {{ projects.length }}</p>
+  </div>
+
+  <div class="grid">
+    <app-project-card *ngFor="let project of projects" [item]="project"></app-project-card>
+  </div>
+</section>
